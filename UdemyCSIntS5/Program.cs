@@ -10,6 +10,11 @@ namespace UdemyCSIntS5
     {
         static void Main(string[] args)
         {
+            DbCommand sqlCommand = new DbCommand(new SqlConnection("SQL Connection"), "SQL Instruction");
+            sqlCommand.Execute();
+
+            DbCommand oracleCommand = new DbCommand(new OracleConnection("Oracle Connection"), "Oracle Instruction");
+            oracleCommand.Execute();
         }
     }
 }
